@@ -1,1 +1,1 @@
-export { Dummy, type DummyProps } from "./Dummy"
+export { default as FileUploadSingle, type FileUploadSingleProps } from "./FileUploadSingle"
