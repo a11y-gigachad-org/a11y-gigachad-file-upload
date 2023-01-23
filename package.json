@@ -41,6 +41,7 @@
     "@rollup/plugin-typescript": "latest",
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
     "@types/jest": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
@@ -51,12 +52,14 @@
     "husky": "latest",
     "jest": "latest",
     "jest-environment-jsdom": "latest",
+    "msw": "latest",
     "prettier": "latest",
     "react": "latest",
     "react-dom": "latest",
     "rollup": "latest",
     "ts-jest": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "whatwg-fetch": "latest"
   },
   "peerDependencies": {
     "react": ">=17.0.0"
