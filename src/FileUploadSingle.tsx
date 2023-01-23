@@ -1,7 +1,7 @@
 import { useState, ChangeEvent, useEffect, useId, useRef } from "react"
 
 export type FileUploadSingleProps = {
-  url: URL | string
+  url: string
   onSuccess?: (data: unknown) => void
   onError?: (error: Error) => void
 }

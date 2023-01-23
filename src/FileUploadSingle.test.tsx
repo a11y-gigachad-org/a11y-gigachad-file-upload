@@ -1,9 +1,13 @@
 import { screen, render } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { rest } from "msw"
-
+import { setupServer } from "msw/node"
 import { FileUploadSingle } from "./"
-import { server } from "../jest.setup"
+
+export const server = setupServer()
+beforeAll(() => server.listen())
+afterEach(() => server.resetHandlers())
+afterAll(() => server.close())
 
 test("shoudld have `file` input and `upload` button", () => {
   render(<FileUploadSingle url="/fake" />)
