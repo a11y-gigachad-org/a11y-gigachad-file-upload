@@ -56,16 +56,12 @@ const FileUploadSingle = (props: FileUploadSingleProps): JSX.Element => {
       }
 
       const data = await response.json()
-      setisSuccess(true)
 
-      if (onSuccess) {
-        onSuccess(data)
-      }
+      setisSuccess(true)
+      onSuccess && onSuccess(data)
     } catch (error) {
       if (error instanceof Error) {
-        if (onError) {
-          onError(error)
-        }
+        onError && onError(error)
 
         setError(error.message)
       }
@@ -83,9 +79,7 @@ const FileUploadSingle = (props: FileUploadSingleProps): JSX.Element => {
     }
   }, [isLoading])
 
-  useEffect(() => {
-    return () => abortController.abort()
-  }, [])
+  useEffect(() => () => abortController.abort(), [])
 
   return (
     <div>
