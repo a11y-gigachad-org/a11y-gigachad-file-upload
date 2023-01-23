@@ -2,8 +2,8 @@ import { useState, ChangeEvent, useEffect, useId, useRef } from "react"
 
 export type FileUploadSingleProps = {
   url: URL | string
-  onSuccess: (data: unknown) => void
-  onError: (error: Error) => void
+  onSuccess?: (data: unknown) => void
+  onError?: (error: Error) => void
 }
 
 const FileUploadSingle = (props: FileUploadSingleProps): JSX.Element => {
@@ -129,7 +129,7 @@ const FileUploadSingle = (props: FileUploadSingleProps): JSX.Element => {
           isLoading
         }
       >
-        {isLoading ? "Loading..." : "Upload a file"}
+        {isLoading ? "loading..." : "upload a file"}
       </button>
     </div>
   )
