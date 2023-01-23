@@ -4,7 +4,7 @@ import { rest } from "msw"
 import { setupServer } from "msw/node"
 import { FileUploadSingle } from "./"
 
-export const server = setupServer()
+const server = setupServer()
 beforeAll(() => server.listen())
 afterEach(() => server.resetHandlers())
 afterAll(() => server.close())
